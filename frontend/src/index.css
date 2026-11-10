@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #392936;
+    background-color: #FFF7FA;
+    min-height: 100vh;
+  }
+
+  .dark body {
+    color: #FDEFF4;
+    background-color: #1A1217;
+  }
+}
+
+/* Custom Soft Pink Glow and Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F5;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #281E25;
+}
+::-webkit-scrollbar-thumb {
+  background: #F4B8CC;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #A66C83;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D96C91;
+}
+
+/* Subtle animation classes */
+@keyframes bloomPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.92;
+  }
+}
+
+.animate-bloom-pulse {
+  animation: bloomPulse 4s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
